@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Timothée KERN - développeur web</title>
+    <!-- POLICE D'ECRITURE GOOGLE FONT (LATO) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <!-- FONT AWESOME PICTOS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+  </head>
+
+  <body>
+    <!-- BOUTON BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
+    <!-- HEADER NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg container-fluid" aria-label="Third navbar example">
+        <a class="navbar-brand" href="index.html"><img src="assets/logo/logo-standard.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item home-nav">
+              <a class="nav-link" aria-current="page" href="#about-Tim">Qui suis-je ?</a>
+            </li>
+            <li class="nav-item about-nav">
+              <a class="nav-link " aria-current="page" href="#my-Skills">Mes compétences</a>
+            </li>
+            <li class="nav-item skills-nav">
+              <a class="nav-link " aria-current="page" href="#my-Background">Mon parcours professionel</a>
+            </li>
+            <li class="nav-item projects-nav">
+              <a class="nav-link " aria-current="page" href="#my-propjects">Mes projets</a>
+            </li>
+            <li class="nav-item contact-nav">
+              <a class="nav-link " aria-current="page" href="#google-map">Contact</a>
+          </ul>
+        </div>
+      </nav>
+      
+        
+    </header>
+
+    <!-- SECTION BANDEAU CV -->
+    <section class="container-fluid bandeau-CV" id="accueil">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-5 mobile-menu-CV">
+          <h1>Timothée KERN</h1>
+          <h2>Développeur-intégrateur Web</h2>
+          <a href="assets/CV_Timothee_KERN.pdf" target="_blank" class="button-cv">Voir mon CV</a>
+        </div>
+
+        <div class="col-12 col-lg-7 col-home-main-img">
+          <img src="assets/photo_5_recolor.webp" alt="Photo de Timothée KERN" id="photo-main-page">
+        </div>
+      </div>        
+    </section>
+
+    <!-- CARROUSEL / SLIDER -->
+    <div class="slider">
+      <div class="slide-track">
+      <div class="slide">
+      <img src="assets/html-logo.png" alt="" />
+      </div>
+      <div class="slide">
+      <img src="assets/css-logo.png"   alt="" />
+      </div>
+      <div class="slide">
+      <img src="assets/js-logo.jpg"  alt="" />
+      </div>
+      <div class="slide">
+      <img src="assets/python_logo.png" alt="" />
+      </div>
+      <div class="slide">
+      <img src="assets/bootstrap_logo.png" alt="" />
+      </div>
+      <div class="slide">
+      <img src="assets/jquery-logo.webp" alt="" />
+      </div>
+
+      <div class="slide">
+        <img src="assets/wordpress-logo.webp" alt="" />
+        </div>
+        <div class="slide">
+        <img src="assets/prestashop-logo.webp"  alt="" />
+        </div>
+        <div class="slide">
+        <img src="assets/photoshop_logo.png" alt="" />
+        </div>
+        <div class="slide">
+        <img src="assets/adobe_illustrator_logo.png" alt="" />
+        </div>
+        <div class="slide">
+        <img src="assets/adobe_xd_logo.png" alt=""/>
+        </div>
+        <div class="slide">
+        <img src="assets/html-logo.png" alt=""/>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- SECTION PRESENTATION -->
+    <section class="container about-Me about-section" id="about-Tim">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 photo-positioner">
+          <img src="assets/Photo-Timothee-KERN.webp" class="img-fluid img-thumbnail" alt="Photo de Timothée KERN">
+        </div>
+        <div class="col-12 col-lg-6">
+          <h2>Bonjour, je m'appelle <strong>Timothée KERN</strong>, je suis Développeur Intégrateur Web en formation au CCI CAMPUS de COLMAR.</h2>
+          <h3>Initialement salarié dans le secteur assurantiel, je me suis renconverti professionnellement en 2022.</h3>
+          <hr>
+          <ul class="about-List">
+            <li><span>NOM :</span> Timothée</li>
+            <li><span>PROFESSION :</span> Étudiant</li>
+            <li><span>AGE :</span> 26 ans</li>
+            <li><span>VILLE :</span> GRIESHIEM-PRES-MOLSHEIM</li>
+          </ul>
+          <a href="assets/CV_Timothee_KERN.pdf" target="_blank" class="button-cv">Voir mon CV</a>  
+        </div>
+      </div>      
+    </section>
+
+    <!-- SECTION MES PASSIONS -->
+    <section class="container about-section" id="my-Passions">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h2 id="hobbies">MES PASSIONS</h2>
+        </div>
+      </div>
+        <ul>
+          <li class="row align-items-center hobbies-list">
+            <div class="col-12 col-lg-6">
+              <h3>Les jeux vidéos</h3>
+              <p>Je me passionne depuis mon enfance pour les jeux vidéos. J'apprécie tout particulièrement les jeux de stratégie et de gestion. Cette passion s'est même traduit par la volonté de vouloir performer : c'est pourquoi je participe depuis 2019, à des compétitions E-sport régulières, sur le jeu Mount&Blade II Bannerlord. Ayant remporter de nombreuses fois des compétitions, j'ai pu même agir en tant que consultant pour aider l'association organisatrice à se développer.</p>
+            </div>
+            <div class="col-12 col-lg-6 photo-positioner">
+              <img src="assets/photo-video-game-resize.webp" class="img-fluid" alt="Photo gros plan d'une personne utilisant son clavier pour jouer aux jeux vidéos">
+            </div>
+          </li>
+          <li class="row align-items-center hobbies-list">
+            <div class="col-12 col-lg-6">
+              <h3>Le cinéma</h3>
+              <p>J'aime beaucoup le cinéma des années 2000. J'ai moi-même écrit plusieurs scénarios de films que j'espère un jour pouvoir mettre sur grand écran. J'attache une grande importance aux développement de personnages, une histoire originale et transmettre des messages et émotions.</p>
+            </div>
+            <div class="col-12 col-lg-6 photo-positioner">
+              <img src="assets/photo-cinema-resize.webp" class="img-fluid " alt="Photo d'un clap de cinéma, d'un bol de popcorn et de lunettes 3D">
+            </div>
+          </li>
+          <li class="row align-items-center hobbies-list">
+            <div class="col-12 col-lg-6">
+              <h3>Le jeu de rôle</h3>
+              <p>J'ai eu l'opportunité, en début d'année 2022, de découvrir le Jeu De Rôle Donjons & Dragons. C'est une activité que j'adore faire dans mon temps libre, elle me permet de dévlopper ma confiance en moi, mon aptitude à l'oral, de plus elle me permets d'utiliser ma capacité d'imagination et de créativé. </p>
+            </div>
+            <div class="col-12 col-lg-6 photo-positioner">
+              <img src="assets/photo-jdr-resize.webp" class="img-fluid" alt="Table de jeu de rôle avec la fiche de personnage et les dés">
+            </div>
+          </li>
+        </ul>
+    </section>
+
+    <!-- SECTION MES COMPETENCES -->
+    <section class="container skills section-skills" id="my-Skills">
+
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <h2>Mes compétences</h2>
+
+          <p>Actuellement en formation au CCI CAMPUS de Colmar, je développe encore mes compétences :</p>
+          <ul class="ul-skills">
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/html-logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-html"><strong>HTML 5</strong></label> 
+              </div>
+              <div class="div-skills">
+                <progress id="skill-html" max="100" value="90"> 90% </progress>
+              </div>             
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/css-logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-css"><strong>CSS 3</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-css" max="100" value="60"> 60% </progress>              
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/js-logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-js"><strong>JavaScript</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-js" max="100" value="50"> 50% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/python_logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-python"><strong>Python</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-python" max="100" value="25"> 25% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/bootstrap_logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-bootstrap"><strong>Bootstrap</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-bootstrap" max="100" value="40"> 40% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/jquery-logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-jquery"><strong>JQuery</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-jquery" max="100" value="40"> 40% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/wordpress-logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-wordpress"><strong>Wordpress</strong></label>
+              </div>
+              <div class="div-skills">              
+                <progress id="skill-wordpress" max="100" value="10"> 10% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/prestashop-logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-prestashop"><strong>PrestaShop</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-prestashop" max="100" value="10"> 10% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/photoshop_logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-photoshop"><strong>Photoshop</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-photoshop" max="100" value="50"> 50% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/adobe_illustrator_logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-illustrator"><strong>Illustrator</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-illustrator" max="100" value="50"> 50% </progress>
+              </div>
+            </li>
+            <li>
+              <div class="div-skills">
+                <img src="assets/skills/adobe_xd_logo.png" alt="">
+              </div>
+              <div class="div-skills">
+                <label for="skill-adobeXD"><strong>AdobeXD</strong></label>
+              </div>
+              <div class="div-skills">
+                <progress id="skill-adobeXD" max="100" value="70"> 70% </progress>
+              </div>
+            </li>
+          </ul>  
+        </div>
+        
+        <div class="col-6 hide-phone-screen">
+          <img src="assets/skills-photo.webp" class="img-fluid" alt="Illustration de l'infomatique">
+        </div>
+      </div>
+    </section> 
+
+    <!-- SECTION EXPERIENCE PRO -->
+    <section class="container professionnal-career section-skills" id="my-Background">
+      <h2>Mes expériences professionnelles & Formations</h2>
+      <ul>
+        <li class="row align-items-center">
+          <div class="col-9 career-item">
+            <h3>2014</h3>
+            <h4>Obtention de mon BAC STMG</h4>
+            <p>Spécialisation comptabilité - Cursus suivi dans le Lycée Polyvalent Marguerite Yourcenar.</p>
+          </div>
+        </li>
+        <li class="row align-items-center">
+          <div class="col-9 career-item">
+            <h3>2016</h3>
+            <h4>Obtention de mon BTS en Assurance</h4>
+            <p>Réalisé auprès du centre de formation Enass IFPASS, en alternance aux Assurances du Crédit Mutuel.</p>
+            <h4>Premier emploi à temps-plein | Employeur : Assurances du Crédit Mutuel</h4>
+            <p>Employé en tant que gestionnaire sinistres automobiles, ayant pour missions principales : l'instruction, le suivi et le règlement des dossiers sinistres automobiles des assurés.</p>
+          </div>
+        </li>
+        <li class="row align-items-center">
+          <div class="col-9 career-item">
+            <h3>2022</h3>
+            <h4>Obtention de mon Bachelor Chargé d'Indemnisation en Assurance</h4>
+            <p>Désireux de vouloir évouler à de nouveaux postes, j'ai pris la décision de reprendre mes études. Formation réalisée auprès du centre de formation Enass IFPASS, en alternance chez RMT Courtier en Assurances à Strasbourg. </p>
+          </div>
+        </li>
+        <li class="row align-items-center">
+          <div class="col-9 career-item">            
+            <h3>2023</h3>
+            <h4>Réorientation dans milieu du développement Web</h4>
+            <p>Me rendant compte que j'étais capable de reprendre les études et de réussir à concrétiser une formation diplômante, j'ai décidé de me réorienter dans un domaine pour lequel je me passionne.</p>
+            <h4>Formation actuellement en cours auprès du CCI CAMPUS de Colmar</h4>
+            <p>Développeur intégrateur Web PHP orienté objet (DWWM), temps plein.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SECTION PROJETS CCI CAMPUS -->
+    <section class="container projects-section" id="my-propjects">
+      <h2>Les projets sur lesquels j'ai travaillé</h2>
+      <h3>Projets vus lors de ma formation au CCI CAMPUS COLMAR</h3>
+      <ul class="row">
+        <li class="col-12 col-md-6 col-lg-4 img-container">
+          <img src="assets/projets/engrenage.jpg" class="img-thumbnail image"  alt="En attente de projet"/>
+          <div class="middle">
+            <div class="text">À venir</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4 img-container">
+          <img src="assets/projets/projet_formulaire.jpg" class="img-thumbnail image"  alt="Capture d'écran du projet 'convertisseur de divise' "/>
+          <div class="middle">
+            <a href="assets/projets/projetFormulaire.html" target="_blank">
+              <div class="text">Voir mon projet Js "Formulaire"</div>
+            </a>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4 img-container">
+          <img src="assets/projets/projet_IMC.jpg" class="img-thumbnail image"  alt="Capture d'écran de du projet 'indicateur d'IMC' "/>
+          <div class="middle">
+            <a href="assets/projets/projetIMC.html" target="_blank">
+              <div class="text">Voir mon projet Js "Indicateur de Masse Corporelle"</div>
+            </a>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4 img-container">
+          <img src="assets/projets/projet_calculatrice.jpg" class="img-thumbnail image"  alt="Capture d'écran de du projet 'calculatrice' "/>
+          <div class="middle">
+            <a href="assets/projets/projetCalculatrice.html" target="_blank">
+              <div class="text">Voir mon projet Js "Calculatrice"</div>
+            </a>
+          </div>
+        </li>
+        <li class="ccol-12 col-md-6 col-lg-4 img-container">
+          <img src="assets/projets/projet_chifoumi.jpg" class="img-thumbnail image"  alt="Capture d'écran de du projet 'chifoumi' "/>
+          <div class="middle">
+            <a href="assets/projets/projetChifoumi.html" target="_blank">
+              <div class="text">Voir mon projet Js "Chifoumi"</div>
+            </a>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4 img-container">
+          <img src="assets/projets/projet_convertisseur.jpg" class="img-thumbnail image"  alt="Capture d'écran de du projet 'convertisseur de devises' "/>
+          <div class="middle">
+            <a href="assets/projets/projetFormulaire.html" target="_blank">
+              <div class="text">Voir mon projet Js "Convertisseur de devises"</div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- SECTION GOOGLE MAP / MA LOCALISATION -->
+    <section id="my-localisation">
+      <div class="map-box-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8891.93570663698!2d7.524798174711488!3d48.50278603529139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796b2e359da3ad1%3A0x40a5fb99a3957d0!2sGriesheim-pr%C3%A9s-Molsheim!5e0!3m2!1sfr!2sfr!4v1669996819939!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="google-map"></iframe>
+        <div class="text-box">
+          <h2>Mon adresse</h2>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> 67870 Griesheim-Près-Molsheim</li>
+            <li><i class="fa-solid fa-car"></i> Permis B</li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:+33678825463" class="contacts">06 78 82 54 63</a></li>
+            <li><i class="fa-regular fa-envelope"></i><a href="mailto:timotheekern@gmail.com" class="contacts">timotheekern@gmail.com</a></li>
+            <li id="hide-sm-1"><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/timoth%C3%A9e-kern-36973b239/" target="_blank" class="social-media">LinkedIn</a></li>
+            <li id="hide-sm-2"><i class="fa-brands fa-github"></i><a href="https://github.com/TimKRN" target="_blank" class="social-media">GitHub</a></li>
+          </ul>
+          <button><i class="fa-regular fa-map"></i> VOIR LA LOCALISATION</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <i class="fa-solid fa-circle-info"></i> Site réalisé par Timothée KERN
+        </div>
+        <div class="col-12 col-md-6">
+          <a href="mentionsLegales.html"><i class="fa-regular fa-share-from-square"></i> Mentions légales</a>
+        </div>
+      </div>
+      
+    </footer>
+
+    <!-- SCRIPTS -->  
+    <script src="bootstrap/bootstrap.bundle.min.js" async></script>
+    <script src="script/script.js" async></script>
+    
+
+  </body>
+
+</html>

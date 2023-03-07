@@ -1,0 +1,69 @@
+h2 {
+    margin: 4% auto;
+    text-transform: uppercase;
+    opacity: 0.25;
+    font-size: 5rem;
+    font-weight: bolder;
+  }
+
+  h3 {
+    color: #163D54 ;
+    font-weight: bolder;
+  }
+
+ul:not(.navbar-nav) {
+    list-style: none;
+}
+
+ul:not(.navbar-nav) li {
+    margin: 2% auto;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (max-width: 991px){
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+
+/* Effet hover */
+.img-container {
+    position: relative;
+  }
+  
+  .image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .img-container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .img-container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #163D54;
+    color: white;
+    font-size: 1.6rem;
+    padding: 2rem 4rem;
+  }

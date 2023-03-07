@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercice Calculatrice</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style media="screen">
+            form{
+                padding:20px;
+            }
+            h1, h2, p{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculatrice</h1>
+        <h2>Pouvez-vous m'aider à faire fonctionner cette calculatrice ?</h2>
+        <ul>
+            <li>La calculatrice doit pouvoir additionner, soustraire, multiplier et diviser deux chiffres ensemble.</li>
+            <li>Afficher le résultat des opérations dans l'écran noir.</li>
+            <li>Bonus : Comme pour une calculatrice classique, la touche = réexécute l'opération précédente si elle existe.</li>
+        </ul>
+        <main class="container">
+        <section class="row">
+            <div class="col-12 my-2">
+                <span id="result" class="btn btn-dark btn-lg btn-block text-right">0</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('7');">7</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('8');">8</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('9');">9</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-warning btn-lg btn-block" onclick="click_touch('+');">+</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('4');">4</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('5');">5</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('6');">6</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-warning btn-lg btn-block" onclick="click_touch('-');">-</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('1');">1</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('2');">2</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('3');">3</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-warning btn-lg btn-block" onclick="click_touch('*');">*</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-primary btn-lg btn-block" onclick="click_touch('0');">0</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-danger btn-lg btn-block" onclick="erase();">C</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-warning btn-lg btn-block" onclick="egal();">=</span>
+            </div>
+            <div class="col-3 py-2">
+                <span class="btn btn-warning btn-lg btn-block" onclick="click_touch('/');">/</span>
+            </div>
+        </section>
+    </main>
+    <script>
+        var operators= ['+','-','*','/'];
+        var resultContainer= document.getElementById("result");
+        var operator = '';
+        var restart = false;
+        var count = 0;
+        var lastOperation = "";
+        var lastCount = "";
+        function click_touch(value){
+            if(operators.indexOf(value) != -1){
+                    count = parseInt(resultContainer.innerHTML)
+                    operator = value;
+                    restart = true;
+            } else{
+                if(resultContainer.innerHTML == '0'){
+                    resultContainer.innerHTML = value;
+                }else{
+                    if(restart == true){
+                        resultContainer.innerHTML = '';
+                        restart = false;
+                    }
+                    resultContainer.innerHTML += value;
+                }
+            }
+        }
+
+        function egal(){
+            switch (operator) {
+                case '+': resultContainer.innerHTML = parseInt(resultContainer.innerHTML) + count; break;
+                case '-': resultContainer.innerHTML = parseInt(resultContainer.innerHTML) - count; break;
+                case '*': resultContainer.innerHTML = parseInt(resultContainer.innerHTML) * count; break;
+                case '/': resultContainer.innerHTML = parseInt(resultContainer.innerHTML) / count; break;
+                default:
+                    resultContainer.innerHTML = eval(resultContainer.innerHTML + lastOperation + count);
+                break;
+            }
+            if(operator != ''){
+                lastOperation = operator;
+                lastCount = count;
+            }
+            operator = '';
+        }
+        function erase(){
+            resultContainer.innerHTML = 0 ;
+            operator = '';
+            restart = false;
+            count = 0;
+            lastCount = '';
+            lastOperation = '';
+        }
+    </script>
+    </body>
+</html>

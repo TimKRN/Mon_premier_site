@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercice formulaire</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style media="screen">
+            form{
+                padding:20px;
+            }
+            h1, h2, p{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pierre | Feuille | Ciseaux</h1>
+        <h2>Afin de finir ces exercices, un peu de détente.</h2>
+        <ul>
+            <li>Créer un jeu de Pierre-Feuille-Ciseau</li>
+            <li>Au clic sur l'un des boutons, l'ordinateur devra faire un choix aléatoire</li>
+            <li>Afficher votre choix, celui de l'ordinateur et qui a gagné</li>
+            <li>Modifié la couleur du résultat suivant ce dernier. Gagné => Vert | Perdu => Rouge | Égalité => Blanc</li>
+            <li>Bonus : Rajouter un compteur pour savoir le nombre de parties gagnées et perdues.</li>
+        </ul>
+
+        <br/>
+        <br/>
+            <main class="container">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <button class="btn btn-dark btn-lg btn-block ">Pierre</button>
+                    </div>
+                    <div class="form-group  col-md-4">
+                        <button class="btn btn-dark btn-lg btn-block ">Feuille</button>
+                    </div>
+                    <div class="form-group  col-md-4">
+                        <button class="btn btn-dark btn-lg btn-block ">Ciseaux</button>
+                    </div>
+                </div>
+
+                <p id='result'></p>
+                <p>Victoire : <span id='countWin'>0</span> | Défaite : <span id='countLoose'>0</span></p>
+            </main>
+
+        <script>
+        var buttons = document.querySelectorAll("button");
+        var countWin = 0;
+        var countLoose = 0;
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', pierreFeuilleCiseaux)
+        }
+
+
+        function pierreFeuilleCiseaux(){
+            const joueur = this.innerHTML;
+            const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
+            let resultat = "";
+            if (joueur===robot) {
+              resultat = "Egalité";
+            }
+            else if ((joueur === "Pierre" && robot === "Ciseaux") || (joueur === "Ciseaux" && robot === "Feuille") || (joueur === "Feuille") && (robot === "Pierre")) {
+              resultat = "Gagné";
+              countWin ++;
+              document.querySelector("#countWin").innerHTML = countWin;
+            }
+            else {
+              resultat = "Perdu";
+              countLoose ++;
+              document.querySelector("#countLoose").innerHTML = countLoose;
+            }
+            document.querySelector("#result").innerHTML = '<p>Joueur : ' + joueur + ' <br/> Robot : ' + robot + ' <br/>Résultat : ' + resultat + '</p>';
+        }
+        </script>
+    </body>
+</html>

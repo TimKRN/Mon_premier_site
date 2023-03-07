@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercice formulaire</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style media="screen">
+            form{
+                padding:20px;
+            }
+            h1, h2, p{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Formulaire d'inscription des petits écoliers</h1>
+        <h2>Merci de bien vouloir compléter ce formulaire avec vos informations personnelles.</h2>
+        <p>Veillez à respecter certaines règles lors du remplissage du formulaire</p>
+        <ul>
+            <li>Nom et prénom doivent contenir plus de 3 caractères</li>
+            <li>Le format de l'email doit être valide</li>
+            <li>Le numéro de téléphone doit contenir 10 caractères</li>
+            <li>Le mot de passe doit contenir au minimum 8 caractères dont au moins 1 chiffre</li>
+            <li>La confirmation du mot de passe doit être identique au mot de passe</li>
+            <li style="color: red;">** TOUS LES CHAMPS SONT OBLIGATOIRES **</li>
+            <li>Tester les champs lors de la validation du formulaire. Si un ou plusieurs champs sont incorrectes, afficher une seule alert en indiquant tous les problèmes.</li>
+        </ul>
+
+        <form id="myForm" class="formulaire" method="post">
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Nom :</label>
+                    <input type="text" class="form-control" id="name" placeholder="Doe">
+                    <small class="form-text text-muted"></small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="firstname">Prénom :</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="John">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">E-mail :</label>
+                    <input type="email" class="form-control" id="email" placeholder="JohnDoe@gmail.com">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Téléphone :</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="0612249011">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" class="form-control" id="password" placeholder="********">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="confirmPassword">Confirmation mot de passe :</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="**********">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="address">Adresse :</label>
+                    <input type="text" class="form-control" id="address" placeholder="12 rue des fleurs">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="postalcode">Code postal :</label>
+                    <input type="text" class="form-control" id="postalcode" placeholder="68000">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="city">Ville :</label>
+                    <input type="text" class="form-control" id="city" placeholder="COLMAR">
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Envoyer" onclick="validForm()"/>
+        </form>
+
+        <script>
+            function validForm(){
+                // event.preventDefault();
+
+                var email = document.getElementById('email');
+                var password = document.getElementById('password');
+                var confirmPassword = document.getElementById('confirmPassword');
+                var error = new Array();
+                var errorSentence = "";
+
+                error.push(lengthValidator("name", 3, 0, 0, 'Le nom doit contenir plus de 3 caractères'));
+                error.push(lengthValidator("firstname", 3, 0, 0, 'Le prénom doit contenir plus de 3 caractères'));
+                error.push(passwordValidator(password, confirmPassword));
+                error.push(lengthValidator("phone", 0, 0, 10, 'Le téléphone doit contenir exactement 10 caractères'));
+                error.push(lengthValidator("address", 0, 0, 0, 'Le champ adresse est obligatoire'));
+                error.push(lengthValidator("postalcode", 0, 0, 0, 'Le champ code postal est obligatoire'));
+                error.push(lengthValidator("city", 0, 0, 0, 'Le champs ville est obligatoire'));
+                error.push(validationMail(email));
+
+                error.forEach((index, i) => {
+                    if(index !== undefined){
+                        errorSentence += '- ' + index +'\n';
+
+                    }
+                })
+                if(errorSentence){
+                    alert(errorSentence)
+                }
+
+            }
+
+            function lengthValidator(name, lengthSup = 0, lengthInf = 0, strictLength = 0, contentError){
+                var obj = document.getElementById(name);
+                if(!obj.value.length){
+                    obj.style.border = "1px solid red";
+                    return contentError;
+                }else{
+                    obj.style.border = "1px solid green";
+                }
+                if(lengthSup){
+                    if(obj.value.length < lengthSup){
+                        obj.style.border = "1px solid red";
+                        return contentError;
+                    }else{
+                        obj.style.border = "1px solid green";
+                    }
+                }
+                if(lengthInf){
+                    if(obj.value.length > lengthInf){
+                        obj.style.border = "1px solid red";
+                        return contentError;
+                    }else{
+                        obj.style.border = "1px solid green";
+                    }
+                }
+                if(strictLength){
+                    if(obj.value.length != strictLength){
+                        obj.style.border = "1px solid red"
+                        return contentError;
+                    }else{
+                        obj.style.border = "1px solid green";
+                    }
+                }
+            }
+            function passwordValidator(pass, confirm){
+                var hasNumber = false;
+                var samePass = false;
+                for (var i = 0; i < pass.value.length; i++) {
+                    if(!isNaN(parseInt(pass.value[i]))){
+                        hasNumber = true;
+                    }
+                    if(pass.value == confirm.value){
+                        samePass = true;
+                    }
+                }
+                if(hasNumber && samePass){
+                    pass.style.border = "1px solid green";
+                    confirm.style.border = "1px solid green";
+                    return;
+                }else{
+                    pass.style.border = "1px solid red";
+                    confirm.style.border = "1px solid red";
+                    return 'Les mots de passe ne sont pas identiques ou ne contiennent pas de chiffre'
+                }
+            }
+
+            function validationMail(mail){
+            	var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            	if (mail.value.match(regex)){
+                    mail.style.border = "1px solid green";
+            	}
+            	else{
+                    mail.style.border = "1px solid red";
+                    return 'Adresse mail non valide'
+            	}
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+/* Général  */
+
+h2 {
+    font-size: 2.5rem;
+    margin: 2% auto;
+}
+h3 {
+    font-size: 2rem;
+}
+
+hr {
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+hr {
+    border-top: 0.2rem solid #163d54 ;
+    margin: 3% auto;
+}
+
+/* 1ère section */
+
+.about-Me {
+    margin: 2% auto;
+}
+
+.photo-positioner {
+    text-align: center;
+}
+
+.about-List{
+    margin-bottom : 35px
+}
+
+.about-List li {
+    display: inline-block;
+    width: calc(99%/2);
+}
+
+.about-List span {
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    margin-right: 2%;
+}
+
+.button-cv {
+    margin: 2% auto;
+}
+
+
+/* 2nd section */
+
+#hobbies {
+    margin: 4% auto;
+    text-transform: uppercase;
+    opacity: 0.25;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.hobbies-list {
+    margin-bottom: 3%;
+}
+
+.hobbies-list h3 {
+    margin: 2% auto;
+}
+
+@media only screen and (max-width: 991px){  
+    #hobbies {
+      font-size: 3.5rem;
+      margin-top: 50px;
+    }
+  }

@@ -1,0 +1,120 @@
+/* Général */
+
+ul:not(.navbar-nav) {
+  list-style: none;
+  margin: 3% auto;
+}
+
+h2 {
+  margin: 4% auto;
+  text-transform: uppercase;
+  opacity: 0.25;
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* 1ère section */
+
+.skills strong {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+}
+
+.skills li {
+  margin-bottom: 2%;
+}
+
+
+progress {
+    -webkit-appearance: none;
+    font-size: 1.8rem;
+    width: 20rem;
+}  
+
+progress::-moz-progress-bar {
+  background-color: #06D6A0;
+}
+
+progress::-webkit-progress-value {
+  background-color: #06D6A0;
+}
+
+.div-skills {
+  display: inline-block;
+  width: calc(70%/3);
+  text-align: center;
+}
+
+@media only screen and (max-width: 991px){
+
+  .div-skills {
+    display: inline-block;
+    width: calc(80%/3);
+    text-align: center;
+  } 
+
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 470px){
+  progress {
+    margin-left: 0.5rem;
+    width: 12rem;
+  }
+
+  .ul-skills {
+    padding: 0;
+  }
+
+  .skills strong {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* 2ème section */
+
+.professionnal-career ul {
+  margin-top: 3%;
+}
+
+.professionnal-career h3 {
+  font-size: 2.5rem;
+  border: 0.3rem solid #163D54;
+  color: #163D54;
+  border-radius: 2.5rem;
+  padding: 1rem;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.professionnal-career h4 {
+  font-size: 1.9rem;
+  margin: 1.5% auto;
+}
+
+.career-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #163D54;
+  position: relative;
+}
+
+.career-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #163D54;
+}

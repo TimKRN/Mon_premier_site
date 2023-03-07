@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>Contact</title>
+      <!-- POLICE D'ECRITURE GOOGLE FONT (LATO) -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+      <!-- BOOTSTRAP -->
+      <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+      <!-- CSS -->
+      <link href="css/style.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/contact.css">
+      <!-- FONT AWESOME PICTOS -->
+      <link rel="stylesheet" href="css/all.min.css">
+      <!-- JQUERY -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+  </head>
+
+  <body>
+    <!-- HEADER NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg container-fluid" aria-label="Third navbar example">
+        <a class="navbar-brand" href="index.html"><img src="assets/logo/logo-standard.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item home-nav">
+              <a class="nav-link" aria-current="page" href="index.html">Page d'accueil</a>
+            </li>
+            <li class="nav-item about-nav">
+              <a class="nav-link " aria-current="page" href="aPropos.html">Qui suis-je ?</a>
+            </li>
+            <li class="nav-item skills-nav">
+              <a class="nav-link " aria-current="page" href="mesCompetences.html">Mes compétences</a>
+            </li>
+            <li class="nav-item projects-nav">
+              <a class="nav-link " aria-current="page" href="mesProjets.html">Mes projets</a>
+            </li>
+            <li class="nav-item contact-nav">
+              <a class="nav-link " aria-current="page" href="contact.html">Contact</a>
+          </ul>
+        </div>
+      </nav>   
+          
+    </header>
+
+    <!-- BOUTON BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Retour en haut</button>
+    
+
+    <!-- SECTION GOOGLE MAP / MA LOCALISATION -->
+    <section id="my-localisation">
+      <div class="map-box-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8891.93570663698!2d7.524798174711488!3d48.50278603529139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796b2e359da3ad1%3A0x40a5fb99a3957d0!2sGriesheim-pr%C3%A9s-Molsheim!5e0!3m2!1sfr!2sfr!4v1669996819939!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="google-map"></iframe>
+        <div class="text-box">
+          <h2>Mon adresse</h2>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> 67870 Griesheim-Près-Molsheim</li>
+            <li><i class="fa-solid fa-car"></i> Permis B</li>
+            <li><i class="fa-solid fa-phone"></i> 06 78 82 54 63</li>
+            <li><i class="fa-regular fa-envelope"></i> timotheekern@gmail.com</li>
+            <li id="hide-sm-1"><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/timoth%C3%A9e-kern-36973b239/" target="_blank" class="social-media">LinkedIn</a></li>
+            <li id="hide-sm-2"><i class="fa-brands fa-github"></i><a href="https://github.com/TimKRN" target="_blank" class="social-media">GitHub</a></li>
+          </ul>
+          <button><i class="fa-regular fa-map"></i> VOIR LA LOCALISATION</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION MON FORMULAIRE -->
+    <section class="container contact-form" id="my-contact-form">
+      <div class="row">
+        <h2>Formulaire de contact</h2>       
+        <form method="" action="">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 civility">
+              <span>Civilité :</span>            
+              <label for="civilite1">Madame</label>
+              <input type="radio" id="civilite1" name="civilite" class="check-input">
+              <label for="civilite3">Monsieur</label>
+              <input type="radio" id="civilite3" name="civilite" class="check-input">
+          </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-3 civility">
+              <label for="prenom"></label>
+              <input class="text-input" id="prenom" name="prenom" type="text" placeholder='Votre Prénom' required />
+            </div>  
+            <div class="col-12 col-md-6 col-lg-3 civility">
+              <label for="nom"></label>
+              <input class="text-input" id="nom" name="nom" type="text" placeholder='Votre Nom' required/>            
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-3">
+              <label for="adressemail"></label>
+              <input class="text-input" id="adressemail" name="adressemail" type="email"  placeholder='Votre Email' required />
+            </div>           
+            <div class="col-12 col-md-6 col-lg-3">
+              <label for="tel"></label>
+              <input class="text-input" id="tel" name="tel" type="tel" placeholder="Numéro de téphone (falcutatif)" />
+            </div>        
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 ">
+              <label for="message"></label>
+              <textarea id="message" name="mesage" placeholder="Votre Message" required></textarea>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 ">
+              <label for="personal-data"></label>
+              <input id="personal-data" name="personal-data" type="checkbox"> <span id="personal-data-text">J'autorise ce site à conserver mes données personnelles.</span>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6  btn-send">
+              <input type="submit" value="Envoyer"/>
+            </div>
+          </div>        
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4">
+          <i class="fa-solid fa-circle-info"></i> Site réalisé par Timothée KERN
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="mentionsLegales.html"><i class="fa-regular fa-share-from-square"></i> Mentions légales</a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="WebsiteMap.html"><i class="fa-solid fa-globe"></i> Plan du site</a>
+        </div>
+      </div>
+      
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="bootstrap/bootstrap.bundle.min.js" async></script>
+    <script src="script/script.js" async></script>
+
+  </body>
+
+</html>

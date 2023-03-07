@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Qui suis-je ?</title>
+    <!-- POLICE D'ECRITURE GOOGLE FONT (LATO) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/about.css">
+    <!-- FONT AWESOME PICTOS -->
+    <link rel="stylesheet" href="css/all.min.css">
+  </head>
+  <body>
+    <!-- HEADER NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg container-fluid" aria-label="Third navbar example">
+        <a class="navbar-brand" href="index.html"><img src="assets/logo/logo-standard.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item home-nav">
+              <a class="nav-link" aria-current="page" href="index.html">Page d'accueil</a>
+            </li>
+            <li class="nav-item about-nav">
+              <a class="nav-link " aria-current="page" href="aPropos.html">Qui suis-je ?</a>
+            </li>
+            <li class="nav-item skills-nav">
+              <a class="nav-link " aria-current="page" href="mesCompetences.html">Mes compétences</a>
+            </li>
+            <li class="nav-item projects-nav">
+              <a class="nav-link " aria-current="page" href="mesProjets.html">Mes projets</a>
+            </li>
+            <li class="nav-item contact-nav">
+              <a class="nav-link " aria-current="page" href="contact.html">Contact</a>
+          </ul>
+        </div>
+      </nav>      
+        
+    </header>
+
+    <!-- BOUTON BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Retour en haut</button>
+
+    <!-- SECTION PRESENTATION -->
+    <section class="container about-Me" id="about-Tim">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 photo-positioner">
+          <img src="assets/Photo-Timothee-KERN.webp" class="img-fluid img-thumbnail" alt="Photo de Timothée KERN">
+        </div>
+        <div class="col-12 col-lg-6">
+          <h2>Bonjour, je m'appelle <strong>Timothée KERN</strong>, je suis Développeur Intégrateur Web en formation au CCI CAMPUS de COLMAR.</h2>
+          <h3>Initialement salarié dans le secteur assurantiel, je me suis renconverti professionnellement en 2022.</h3>
+          <hr>
+          <ul class="about-List">
+            <li><span>NOM :</span> Timothée</li>
+            <li><span>PROFESSION :</span> Étudiant</li>
+            <li><span>AGE :</span> 26 ans</li>
+            <li><span>VILLE :</span> GRIESHIEM-PRES-MOLSHEIM</li>
+          </ul>
+          <a href="assets/CV_Timothee_KERN.pdf" target="_blank" class="button-cv">Voir mon CV</a>  
+        </div>
+      </div>      
+    </section>
+
+    <!-- SECTION MES PASSIONS -->
+    <section class="container" id="my-Passions">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h2 id="hobbies">MES PASSIONS</h2>
+        </div>
+      </div>
+        <ul>
+          <li class="row align-items-center hobbies-list">
+            <div class="col-12 col-lg-6">
+              <h3>Les jeux vidéos</h3>
+              <p>Je me passionne depuis mon enfance pour les jeux vidéos. J'apprécie tout particulièrement les jeux de stratégie et de gestion. Cette passion s'est même traduit par la volonté de vouloir performer : c'est pourquoi je participe depuis 2019, à des compétitions E-sport régulières, sur le jeu Mount&Blade II Bannerlord. Ayant remporter de nombreuses fois des compétitions, j'ai pu même agir en tant que consultant pour aider l'association organisatrice à se développer.</p>
+            </div>
+            <div class="col-12 col-lg-6 photo-positioner">
+              <img src="assets/photo-video-game-resize.webp" class="img-fluid" alt="Photo gros plan d'une personne utilisant son clavier pour jouer aux jeux vidéos">
+            </div>
+          </li>
+          <li class="row align-items-center hobbies-list">
+            <div class="col-12 col-lg-6">
+              <h3>Le cinéma</h3>
+              <p>J'aime beaucoup le cinéma des années 2000. J'ai moi-même écrit plusieurs scénarios de films que j'espère un jour pouvoir mettre sur grand écran. J'attache une grande importance aux développement de personnages, une histoire originale et transmettre des messages et émotions.</p>
+            </div>
+            <div class="col-12 col-lg-6 photo-positioner">
+              <img src="assets/photo-cinema-resize.webp" class="img-fluid " alt="Photo d'un clap de cinéma, d'un bol de popcorn et de lunettes 3D">
+            </div>
+          </li>
+          <li class="row align-items-center hobbies-list">
+            <div class="col-12 col-lg-6">
+              <h3>Le jeu de rôle</h3>
+              <p>J'ai eu l'opportunité, en début d'année 2022, de découvrir le Jeu De Rôle Donjons & Dragons. C'est une activité que j'adore faire dans mon temps libre, elle me permet de dévlopper ma confiance en moi, mon aptitude à l'oral, de plus elle me permets d'utiliser ma capacité d'imagination et de créativé. </p>
+            </div>
+            <div class="col-12 col-lg-6 photo-positioner">
+              <img src="assets/photo-jdr-resize.webp" class="img-fluid" alt="Table de jeu de rôle avec la fiche de personnage et les dés">
+            </div>
+          </li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4">
+          <i class="fa-solid fa-circle-info"></i> Site réalisé par Timothée KERN
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="mentionsLegales.html"><i class="fa-regular fa-share-from-square"></i> Mentions légales</a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="WebsiteMap.html"><i class="fa-solid fa-globe"></i> Plan du site</a>
+        </div>
+      </div>
+      
+    </footer>
+
+    <!-- SCRIPTS -->  
+    <script src="bootstrap/bootstrap.bundle.min.js" async></script>
+    <script src="script/script.js" async></script>
+
+
+  </body>
+</html>

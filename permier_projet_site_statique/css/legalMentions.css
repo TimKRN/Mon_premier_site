@@ -1,0 +1,12 @@
+/* UNIQUEMENT POUR MENTIONS LEGALES */
+main {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+}
+main h2 {
+    margin: 4% auto;
+    text-transform: uppercase;
+    opacity: 0.25;
+    font-size: 5rem;
+    font-weight: bolder;
+}

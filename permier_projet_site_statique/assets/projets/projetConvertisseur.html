@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercice formulaire</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style media="screen">
+            form{
+                padding:20px;
+            }
+            h1, h2, p{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Convertisseur de devise</h1>
+        <h2>Compléter le code pour faire fonctionner ce convertisseur de devise</h2>
+        <ul>
+            <li>Lorsque la valeur du champ euro est modifié, les autres champs doivent se mettre à jour.</li>
+            <li>Pour vous aider, vous pouvez retrouver la valeur des devises <a target="_blank" href="https://www.xe.com/fr/currencyconverter/convert">ici</a></li>
+            <li style="color: #5454e1;">Puis, fait en sorte que chaque changement de valeur affecte les autres champs</li>
+        </ul>
+        <form id="myForm" class="formulaire" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="euros">EUR :</label>
+                    <input type="number" class="form-control" id="euros" placeholder="0">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="dollars">USD :</label>
+                    <input type="number" class="form-control" id="dollars" placeholder="0">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="livres">GBP :</label>
+                    <input type="number" class="form-control" id="livres" placeholder="0">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="wons">KRW :</label>
+                    <input type="number" class="form-control" id="wons" placeholder="0">
+                </div>
+            </div>
+        </form>
+
+        <script>
+            var inputs = document.getElementsByTagName('input');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('keyup', convertisseur);
+                inputs[i].addEventListener('click', convertisseur);
+            }
+
+            function convertisseur(){
+                if(!this.value){
+                    return
+                }
+                var eur = document.getElementById('euros');
+                var usd = document.getElementById('dollars');
+                var gbp = document.getElementById('livres');
+                var krw = document.getElementById('wons');
+                var currentValue = parseInt(this.value);
+                switch (this.id) {
+                    case 'euros':
+                        usd.value = currentValue * 1.1284;
+                        gbp.value = currentValue * 0.84;
+                        krw.value = currentValue * 1339.7922;
+                        break;
+                    case 'dollars':
+                        eur.value = currentValue * 0.886;
+                        gbp.value = currentValue * 0.744;
+                        krw.value = currentValue * 1187.3109;
+                        break;
+
+                    case 'livres':
+                        eur.value = currentValue * 1.19;
+                        usd.value = currentValue * 1.3428;
+                        krw.value = currentValue * 1594.316;
+                        break;
+
+                    case 'wons':
+                        eur.value = currentValue * 0.00074652489;
+                        usd.value = currentValue * 0.00084219699 ;
+                        gbp.value = currentValue * 0.00062722822;
+                        break;
+
+                    default:break;
+
+                }
+            }
+        </script>
+    </body>
+</html>

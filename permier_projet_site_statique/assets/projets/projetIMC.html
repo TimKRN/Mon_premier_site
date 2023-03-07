@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercice formulaire</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style media="screen">
+            form{
+                padding:20px;
+            }
+            h1, h2, p{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>IMC</h1>
+        <h2>Compléter le code pour faire fonctionner cet indicateur d'IMC</h2>
+        <p>La formule pour calculer son IMC est : poids en kg/taille² en m</p>
+        <ul>
+            <li>Effectuer une fonction qui vous permet de calculer l'IMC</li>
+            <li>Afficher le résultat</li>
+            <li>Afficher selon l'IMC, les textes visibles dans l'image ci-dessous.</li>
+            <li>Penser à sécuriser vos champs de formulaire.</li>
+        </ul>
+
+        <form id="ideal" name="ideal" class="formulaire" method="post">
+            <img class="img-fluid" style="display:block;margin:0 auto; width: 500px;" src='https://www.giovanni-coach-sportif.fr/upload/44506-calcul-imc.jpg'>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="taille">Entrer votre taille en cm :</label>
+                    <input type="number" class="form-control" id="taille" name='taille' placeholder="170">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="poids">Entrer votre poids :</label>
+                    <input type="number" class="form-control" id="poids" name='poids' placeholder="70">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" style="width:100%;" class="btn btn-primary" value="Envoyer" onclick="Valider(this.form)"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="reset" style="width:100%;" class="btn btn-warning" value="Reset"/>
+                </div>
+            </div>
+            <p>Votre IMC est de : <span id="result">0</span></p>
+            <p>Vous êtes : <span id="result2"></span></p>
+        </form>
+        <script>
+            function Valider(ideal){
+                event.preventDefault();
+        		var taille = document.ideal.taille.value
+        		var poids = document.ideal.poids.value
+                var result = document.getElementById('result');
+                var result2 = document.getElementById('result2');
+                if ((taille == "" || taille < 1) || (poids == "" || poids < 1)){
+                    alert("Veuillez renseigné votre poids et votre taille");
+                }
+				else{
+                    var nombre1 = (taille*0.01)          //convertion de la taille des centimètres en mètres
+        			var nombre2 = (nombre1*nombre1)      //taille au carré
+        			var nombre3 = (poids/nombre2)        //poids divisé par la taille
+                    result.innerHTML = nombre3.toFixed(2); // permet d'arrondir à 2 chiffres après la virgule
+
+                    if(nombre3 < 18.5){
+                        result2.innerHTML = "Très faible !";
+                    } else if( nombre3 < 25){
+                        result2.innerHTML = "Normal !"
+                    } else if( nombre3 < 30){
+                        result2.innerHTML = "Sur-poids !"
+                    } else if( nombre3 < 35){
+                        result2.innerHTML = "Obésité!"
+                    } else {
+                        result2.innerHTML = "Obésité morbide"
+                    }
+    	        }
+            }
+        </script>
+    </body>
+</html>
